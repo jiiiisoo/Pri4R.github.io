@@ -112,6 +112,8 @@ p {
   margin: 0 6px;
   text-align: center;
   white-space: nowrap;
+  flex: 0 0 auto;
+  padding: 0 4px;
 }
 
 .author-text {
