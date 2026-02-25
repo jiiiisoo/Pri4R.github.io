@@ -1,7 +1,7 @@
 :root {
   --primary-color: #000;
   --secondary-color: #333;
-  --accent-color: #667eea;
+  --accent-color: #7B8FE0;
   --text-color: #2d3748;
   --light-text: #4a5568;
   --background-color: #ffffff;
@@ -446,7 +446,7 @@ pre {
 .hero-section {
   padding-top: 100px;
   padding-bottom: 30px;
-  background: linear-gradient(to bottom, #f9f9ff 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, #f3eefb 0%, #eef6fc 50%, #ffffff 100%);
 }
 
 .main-content {
@@ -721,7 +721,7 @@ pre {
 }
 
 .gradient-text {
-    background: linear-gradient(45deg, #007AFF, #5856D6, #AF52DE);
+    background: linear-gradient(135deg, #B9A0E8, #7BAAE0, #6DC8F2);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
