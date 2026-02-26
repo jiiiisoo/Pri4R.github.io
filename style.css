@@ -835,6 +835,7 @@ pre {
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.4s ease;
@@ -842,6 +843,7 @@ pre {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .exp-slideshow .slide.active {
@@ -861,6 +863,7 @@ pre {
 
 .video-pair {
     display: flex;
+    flex-direction: row;
     gap: 8px;
     width: 100%;
 }
