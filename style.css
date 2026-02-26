@@ -234,7 +234,7 @@ p {
 }
 
 .large-image {
-  max-width: 60%;
+  max-width: 100%;
   display: block;
   margin: 1rem auto 2rem auto;
 }
@@ -630,7 +630,7 @@ pre {
 .comparison-slideshow-image {
     max-width: 900px;
     width: 100%;
-    height: auto;
+    height: 280px;
     margin: 0 auto;
     object-fit: contain;
     border-radius: 8px;
@@ -790,6 +790,29 @@ pre {
     .advantages-table td {
         padding: 0.75rem;
     }
+}
+
+/* =============================================
+   DATASET VIDEO PANELS
+   ============================================= */
+.data-video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.data-video-panel {
+    background: var(--light-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.data-video-panel video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
 }
 
 /* =============================================
