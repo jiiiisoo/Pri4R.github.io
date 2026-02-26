@@ -45,8 +45,7 @@
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="#abstract">Overview</a></li>
-                    <li><a href="#task-definition">DLC Task</a></li>
-                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#pipeline">Pipeline</a></li>
                     <li><a href="#data-pipeline">Data</a></li>
                     <li><a href="#dlc-bench">Benchmark</a></li>
                     <li><a href="#citation">Citation</a></li>
@@ -249,7 +248,7 @@
                 </div>
             </div> -->
 
-            <section id="task-definition" class="section">
+            <!-- <section id="task-definition" class="section">
                 <h2>Detailed Localized Captioning (DLC)</h2>
 
                 <p>Detailed Localized Captioning (DLC) is the task of generating comprehensive and context-aware descriptions of specific regions within an image. Unlike traditional image captioning, which summarizes the entire scene in broad strokes, DLC dives deeper into the finer details of a user-specified area.</p>
@@ -279,23 +278,25 @@
                         class="image-item img large-image z-depth-1">
                     <p class="image-caption">Compared to prior works, the description from our <strong>Describe Anything Model (DAM)</strong> is more detailed and accurate. <span class="image-credit">(Image credit: SAM Materials (CC BY-SA 4.0))</span></p>
                 </div>
-            </section>
+            </section> -->
 
-            <section id="architecture" class="section">
-                <h2>Architecture of Describe Anything Model (DAM)</h2>
+            <section id="pipeline" class="section">
+                <h2>Pipeline of Pri4R</h2>
 
-                <p>Our architecture uses a "Focal Prompt" to provide both the full image and a zoomed-in view of the target region.</p>
+                <p>Pri4R is a framework that incorporates privileged geometric information to improve the world dynamics understanding of VLA models. 
+                    During training, we use high-fidelity 4D signals as an auxiliary supervision to refine the internal representations of the VLM backbone. 
+                    By supervising the model to predict the physical evolution of the scene, we enable the VLA to develop a physically-aware context for robot control, without requiring any additional inputs or computational overhead during inference.</p>
                 <div class="image-container">
-                    <img src="images/slideshow/slide6.jpg"
+                    <img src="image/method.jpg"
                         class="image-item img large-image z-depth-1">
                     <p class="image-caption"><span class="image-credit">Image credit: Objects365 Dataset (CC BY 4.0)</span></p>
                 </div>
 
-                <p>We introduce a localized vision backbone that integrates global and focal features.</p>
+                <!-- <p>We introduce a localized vision backbone that integrates global and focal features.</p>
                 <div class="image-container" style="display: flex; justify-content: center;">
                     <img src="images/slideshow/slide7.jpg"
                         class="image-item img large-image z-depth-1" style="max-width: 500px; width: 50%;">
-                </div>
+                </div> -->
             </section>
 
             <section id="data-pipeline" class="section">
