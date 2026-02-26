@@ -151,7 +151,89 @@
                 <b>TL;DR</b>: Pri4R improves VLA’s physical interaction capabilities by leveraging privileged 4D supervision to instill an implicit understanding of world dynamics, incurring no inference overhead and yielding large gains on manipulation tasks.
             </div>
 
-            <section id="experiments" class="section" style="margin-top: 2rem;">
+            <section id="abstract" class="section">
+                <h2>Introducing the Pri4R</h2>
+
+                <p> The Pri4R is a </p>
+                <div class="image-container">
+                    <img src="image/main_figure.jpg" class="img large-image">
+                </div>
+            </section>
+
+            <!-- <div id="video" class="base-row">
+                <div class="video-container main-video-container">
+                    <video class="slideshow-video align-bottom main-video" controls poster="images/slideshow/slide1_full.jpg">
+                        <source src="images/video.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-button-overlay">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <section id="task-definition" class="section">
+                <h2>Detailed Localized Captioning (DLC)</h2>
+
+                <p>Detailed Localized Captioning (DLC) is the task of generating comprehensive and context-aware descriptions of specific regions within an image. Unlike traditional image captioning, which summarizes the entire scene in broad strokes, DLC dives deeper into the finer details of a user-specified area.</p>
+                <div class="image-container">
+                    <div class="image-content">
+                        <img src="images/slideshow/slide1.jpg" class="img large-image">
+                    </div>
+                    <p class="image-caption"><strong>Describe Anything Model (DAM)</strong> performs detailed localized captioning (DLC), generating <strong>detailed</strong> and <strong>localized</strong> descriptions for user-specified regions within <em>images</em>.<br/> <span class="image-credit">(Image credit: Markus Trienke (CC BY-SA 2.0))</span></p>
+                </div>
+
+                <p>DLC extends naturally to videos by describing how a specified region's appearance and context change over time.</p>
+                <div class="image-container">
+                    <video class="slideshow-video align-bottom" autoplay muted loop poster="images/slideshow/slide2.jpg">
+                        <source src="images/video_example.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="image-caption"><strong>Describe Anything Model (DAM)</strong> can also perform detailed localized video captioning.<br/> <span class="image-credit">(Video credit: MOSE Dataset (CC BY-NC-SA 4.0))</span></p>
+                </div>
+            </section>
+
+            <section id="highly-detailed-captioning" class="section">
+                <h2>Highly Detailed Image and Video Captioning</h2>
+
+                <p>Our method excels at producing detailed descriptions of objects in both images and videos.</p>
+                <div class="image-container">
+                    <img src="images/slideshow/slide3.jpg"
+                        class="image-item img large-image z-depth-1">
+                    <p class="image-caption">Compared to prior works, the description from our <strong>Describe Anything Model (DAM)</strong> is more detailed and accurate. <span class="image-credit">(Image credit: SAM Materials (CC BY-SA 4.0))</span></p>
+                </div>
+            </section> -->
+
+            <section id="pipeline" class="section">
+                <h2>Pipeline of Pri4R</h2>
+
+                <p>Pri4R is a framework that incorporates privileged geometric information to improve the world dynamics understanding of VLA models. 
+                    During training, we use high-fidelity 4D signals as an auxiliary supervision to refine the internal representations of the VLM backbone. 
+                    By supervising the model to predict the physical evolution of the scene, we enable the VLA to develop a physically-aware context for robot control, without requiring any additional inputs or computational overhead during inference.</p>
+                <div class="image-container">
+                    <img src="image/method.jpg"
+                        class="image-item img large-image z-depth-1">
+                    <!-- <p class="image-caption"><span class="image-credit">Image credit: Objects365 Dataset (CC BY 4.0)</span></p> -->
+                </div>
+
+                <!-- <p>We introduce a localized vision backbone that integrates global and focal features.</p>
+                <div class="image-container" style="display: flex; justify-content: center;">
+                    <img src="images/slideshow/slide7.jpg"
+                        class="image-item img large-image z-depth-1" style="max-width: 500px; width: 50%;">
+                </div> -->
+            </section>
+
+            <section id="data-pipeline" class="section">
+                <h2>Semi-supervised Data Pipeline (DLC-SDP)</h2>
+
+                <p>Because existing datasets lack detailed localized descriptions, we devised a two-stage pipeline.</p>
+                <div class="image-container">
+                    <img src="images/slideshow/slide8.jpg"
+                        class="image-item img large-image z-depth-1">
+                </div>
+            </section>
+
+            <section id="experiments" class="section">
                 <h2>Real Robot Experiments</h2>
                 <p>Side-by-side comparison of baseline methods and their Pri4R-enhanced versions. Use arrows to browse methods within each task.</p>
 
@@ -372,88 +454,6 @@
                             <div class="slide-dots"></div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="abstract" class="section">
-                <h2>Introducing the Pri4R</h2>
-
-                <p> The Pri4R is a </p>
-                <div class="image-container">
-                    <img src="image/main_figure.jpg" class="img large-image">
-                </div>
-            </section>
-
-            <!-- <div id="video" class="base-row">
-                <div class="video-container main-video-container">
-                    <video class="slideshow-video align-bottom main-video" controls poster="images/slideshow/slide1_full.jpg">
-                        <source src="images/video.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="play-button-overlay">
-                        <i class="fa fa-play"></i>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <section id="task-definition" class="section">
-                <h2>Detailed Localized Captioning (DLC)</h2>
-
-                <p>Detailed Localized Captioning (DLC) is the task of generating comprehensive and context-aware descriptions of specific regions within an image. Unlike traditional image captioning, which summarizes the entire scene in broad strokes, DLC dives deeper into the finer details of a user-specified area.</p>
-                <div class="image-container">
-                    <div class="image-content">
-                        <img src="images/slideshow/slide1.jpg" class="img large-image">
-                    </div>
-                    <p class="image-caption"><strong>Describe Anything Model (DAM)</strong> performs detailed localized captioning (DLC), generating <strong>detailed</strong> and <strong>localized</strong> descriptions for user-specified regions within <em>images</em>.<br/> <span class="image-credit">(Image credit: Markus Trienke (CC BY-SA 2.0))</span></p>
-                </div>
-
-                <p>DLC extends naturally to videos by describing how a specified region's appearance and context change over time.</p>
-                <div class="image-container">
-                    <video class="slideshow-video align-bottom" autoplay muted loop poster="images/slideshow/slide2.jpg">
-                        <source src="images/video_example.mov" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p class="image-caption"><strong>Describe Anything Model (DAM)</strong> can also perform detailed localized video captioning.<br/> <span class="image-credit">(Video credit: MOSE Dataset (CC BY-NC-SA 4.0))</span></p>
-                </div>
-            </section>
-
-            <section id="highly-detailed-captioning" class="section">
-                <h2>Highly Detailed Image and Video Captioning</h2>
-
-                <p>Our method excels at producing detailed descriptions of objects in both images and videos.</p>
-                <div class="image-container">
-                    <img src="images/slideshow/slide3.jpg"
-                        class="image-item img large-image z-depth-1">
-                    <p class="image-caption">Compared to prior works, the description from our <strong>Describe Anything Model (DAM)</strong> is more detailed and accurate. <span class="image-credit">(Image credit: SAM Materials (CC BY-SA 4.0))</span></p>
-                </div>
-            </section> -->
-
-            <section id="pipeline" class="section">
-                <h2>Pipeline of Pri4R</h2>
-
-                <p>Pri4R is a framework that incorporates privileged geometric information to improve the world dynamics understanding of VLA models. 
-                    During training, we use high-fidelity 4D signals as an auxiliary supervision to refine the internal representations of the VLM backbone. 
-                    By supervising the model to predict the physical evolution of the scene, we enable the VLA to develop a physically-aware context for robot control, without requiring any additional inputs or computational overhead during inference.</p>
-                <div class="image-container">
-                    <img src="image/method.jpg"
-                        class="image-item img large-image z-depth-1">
-                    <!-- <p class="image-caption"><span class="image-credit">Image credit: Objects365 Dataset (CC BY 4.0)</span></p> -->
-                </div>
-
-                <!-- <p>We introduce a localized vision backbone that integrates global and focal features.</p>
-                <div class="image-container" style="display: flex; justify-content: center;">
-                    <img src="images/slideshow/slide7.jpg"
-                        class="image-item img large-image z-depth-1" style="max-width: 500px; width: 50%;">
-                </div> -->
-            </section>
-
-            <section id="data-pipeline" class="section">
-                <h2>Semi-supervised Data Pipeline (DLC-SDP)</h2>
-
-                <p>Because existing datasets lack detailed localized descriptions, we devised a two-stage pipeline.</p>
-                <div class="image-container">
-                    <img src="images/slideshow/slide8.jpg"
-                        class="image-item img large-image z-depth-1">
                 </div>
             </section>
 
