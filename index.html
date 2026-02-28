@@ -259,11 +259,15 @@
 <p>
   Overall, the largest improvements come from <em>temporally dense</em> and <em>3D</em> supervision together: <strong>3D point tracks</strong> provide the strongest signal because they jointly capture motion dynamics (temporality) and geometry (spatiality).
 </p>
-                <h3>Spatial Redundancy</h3>
-                <p>Description for spatial redundancy.</p>
+<h3>Spatial Redundancy</h3>
+<p>
+  We compare <strong>3D point tracks</strong> with spatially dense supervision such as <strong>depth</strong>. While depth helps over the baseline, it consistently underperforms 3D point tracks. The key reason is that depth is often <strong>temporally redundant</strong> (especially under a mostly static view) and lacks <strong>point identity</strong> across time, making it a weaker signal for learning interaction-driven scene changes.
+</p>
 
-                <h3>Scene-Robot Interaction</h3>
-                <p>Description for scene-robot interaction.</p>
+<h3>Scene–Robot Interaction</h3>
+<p>
+  We ablate <strong>tracking only the environment</strong> or <strong>only the robot</strong> versus our <strong>world tracking (environment + robot)</strong>. Neither alone matches world tracking, indicating that explicitly modeling <strong>robot–environment interaction</strong> is crucial for improved performance in complex manipulation.
+</p>
             </section>
 
             <section id="experiments" class="section">
