@@ -249,9 +249,16 @@
                     <!-- <p class="image-caption"><span class="image-credit">Image credit: Objects365 Dataset (CC BY 4.0)</span></p> -->
                 </div>
 
-                <h3>Temporality & Spatiality</h3>
-                <p>Description for temporality and spatiality.</p>
-
+                <h3>Temporality &amp; Spatiality</h3>
+<p>
+  <strong>Temporality matters.</strong> When we relax supervision from temporally dense <em>3D point tracks</em> to a temporally sparse <em>3D point set</em> objective, the success rate improves only slightly—suggesting that dense, frame-to-frame guidance is a key driver of performance.
+</p>
+<p>
+  <strong>Spatiality matters.</strong> Replacing <em>3D point tracks</em> with <em>2D point tracks</em> yields only a marginal gain, indicating that accurate 3D geometric supervision is crucial.
+</p>
+<p>
+  Overall, the largest improvements come from <em>temporally dense</em> and <em>3D</em> supervision together: <strong>3D point tracks</strong> provide the strongest signal because they jointly capture motion dynamics (temporality) and geometry (spatiality).
+</p>
                 <h3>Spatial Redundancy</h3>
                 <p>Description for spatial redundancy.</p>
 
