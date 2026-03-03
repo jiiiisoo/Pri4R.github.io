@@ -249,14 +249,25 @@
                     <!-- <p class="image-caption"><span class="image-credit">Image credit: Objects365 Dataset (CC BY 4.0)</span></p> -->
                 </div>
 
-                <h3>Temporality & Spatiality</h3>
-                <p>Description for temporality and spatiality.</p>
+                <h3>Temporality &amp; Spatiality</h3>
+<p>
+  <strong>Temporality matters.</strong> When we relax supervision from temporally dense <em>3D point tracks</em> to a temporally sparse <em>3D point set</em> objective, the success rate improves only slightly—suggesting that dense, frame-to-frame guidance is a key driver of performance.
+</p>
+<p>
+  <strong>Spatiality matters.</strong> Replacing <em>3D point tracks</em> with <em>2D point tracks</em> yields only a marginal gain, indicating that accurate 3D geometric supervision is crucial.
+</p>
+<p>
+  Overall, the largest improvements come from <em>temporally dense</em> and <em>3D</em> supervision together: <strong>3D point tracks</strong> provide the strongest signal because they jointly capture motion dynamics (temporality) and geometry (spatiality).
+</p>
+<h3>Spatial Redundancy</h3>
+<p>
+  We compare <strong>3D point tracks</strong> with spatially dense supervision such as <strong>depth</strong>. While depth helps over the baseline, it consistently underperforms 3D point tracks. The key reason is that depth is often <strong>spatially redundant</strong> (especially under a mostly static view) and lacks <strong>point identity</strong> across time, making it a weaker signal for learning interaction-driven scene changes.
+</p>
 
-                <h3>Spatial Redundancy</h3>
-                <p>Description for spatial redundancy.</p>
-
-                <h3>Scene-Robot Interaction</h3>
-                <p>Description for scene-robot interaction.</p>
+<h3>Scene–Robot Interaction</h3>
+<p>
+  We ablate <strong>tracking only the environment</strong> or <strong>only the robot</strong> versus our <strong>world tracking (environment + robot)</strong>. Neither alone matches world tracking, indicating that explicitly modeling <strong>robot–environment interaction</strong> is crucial for improved performance in complex manipulation.
+</p>
             </section>
 
             <section id="experiments" class="section">
